@@ -4,4 +4,4 @@ function multiplyNumeric(obj) {
     obj[prop] *=2;
    }
  }
-}
+};

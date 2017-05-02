@@ -4,13 +4,17 @@ const myBike = {
   price: 199.99,
   frame: {
     height: 55,
-    color: 'red',
-    style: 'mountain'
+    color: 'blue',
+    style: 'cruiser',
   },
   brakes: {
     front:false,
-    rear: true,
-  }
-}
-
+    back: true,
+  },
+  tires: {
+    diameter: 22,
+    type: 'fat',
+  },
+  rings: [2, 5],
+};
 module.exports = myBike
