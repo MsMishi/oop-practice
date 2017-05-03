@@ -22,10 +22,9 @@ function Bike(name = 'Speedster', price = 250.00) {
   };
 };
 
-
-/* let customFrame = new Frame('red', 58, 'racing');
+let customFrame = new Frame('red', 58, 'racing');
 let customTires = [new Tire(24, 'racing'), new Tire(24, 'racing')];
-*/
+
 module.exports = {
   Bike: Bike,
   Frame: Frame,
