@@ -1,29 +1,29 @@
 
-function Frame(color, size, style) {
-  // your code here
+function Frame(color ='black', size = 55, style = 'street') {
   this.color = color;
   this.size = size;
-  this.style = style;
+  this.style = style
 };
 
-//let frame = new Frame('black', 55, 'street');
-
-
-function Tire(diameter, type) {
-  // your code here
+function Tire(diameter = 22, type = 'street') {
   this.diameter = diameter;
   this.type = type;
 };
 
-function Bike(name, price) {
-  this.name = 'Speedster';
-  this.price = 250.00;
-  rings: [3, 7];
+function Bike(name = 'Speedster', price = 250.00) {
+  this.name = name;
+  this.price = price;
+  this.frame = new Frame();
+  this.tires = [new Tire(), new Tire()];
+  this.rings = [3, 7];
+  this.brakes =  {
+    front: true,
+    back: true,
+  };
 };
 
 
-let myBike = new Bike('Speedster', 250.00);
-/*let customFrame = new Frame('red', 58, 'racing');
+/* let customFrame = new Frame('red', 58, 'racing');
 let customTires = [new Tire(24, 'racing'), new Tire(24, 'racing')];
 */
 module.exports = {
