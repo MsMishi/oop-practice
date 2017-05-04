@@ -15,21 +15,22 @@ Bike.prototype.isMoving = function() {
   return this._isMoving
 }
 
-/*Bike.protoype.gearSpeeds = function() {
- return this.rings[0] * this.rings[1]
-} */
+Bike.prototype.gearSpeeds = function() {
+  return this.rings[0] * this.rings[1]
+}
 
 Bike.prototype.pedal = function() {
-  if (this.pedal = false) {
-  return this._isMoving = false
-} else if (this.pedal = true) {
-  return this._isMoving = true
+  if (this.tires[0]._isFlat || this.tires[1]._isFlat) {
+  throw ("Can't pedal with a flat tire")
+} else {
+ this._isMoving = true
 }
 }
 
 Bike.prototype.brake = function() {
-  this._isMoving = false
+  return this._isMoving = false
 }
+
   function Frame(color ='black', size = 55, style = 'street') {
     this.color = color
     this.size = size
@@ -44,15 +45,17 @@ function Tire(diameter = 22, type = 'street') {
 }
 
 Tire.prototype.isFlat = function(){
-  return this._isFlat
+   return this._isFlat
 }
 
 Tire.prototype.puncture = function(){
   return this._isFlat = true
   }
+
 Tire.prototype.repair = function() {
-  return this._isFlat = false
+  this._isFlat = false
 }
+
 module.exports = {
   Bike: Bike,
   Frame: Frame,
