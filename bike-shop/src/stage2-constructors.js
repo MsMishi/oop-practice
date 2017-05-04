@@ -2,7 +2,7 @@
 function Frame(color ='black', size = 55, style = 'street') {
   this.color = color;
   this.size = size;
-  this.style = style
+  this.style = style;
 };
 
 function Tire(diameter = 22, type = 'street') {
