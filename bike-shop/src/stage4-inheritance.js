@@ -1,16 +1,46 @@
 class Frame {
-// your code here
+  constructor(style){
+    this.style = style
+  }
 }
 
 class Tire {
-  // your code here
+constructor(diameter, type){
+  this.diameter = diameter
+  this.type = type
+}
 }
 
 class Bike {
-  // your code here
+  constructor() {
+    this.frame = new Frame()
+    this.tires = [new Tire(), new Tire()]
+  }
+}
+class MountainBike extends Bike {
+  constructor() {
+  super();
+  this.frame.style = "mountain"
+  this.tires[0].type = "dirt"
+  this.tires[1].type = "dirt"
+  this.shocks = 20
+}
+  adjustShocks(newSagSetting){
+    this.shocks = newSagSetting
+  }
+}
+
+class BMXBike extends Bike {
+  constructor() {
+    super();
+    this.
+  }
+
 }
 
 module.exports = {
   Bike: Bike,
-  // you'll need to export new classes here
+  MountainBike: MountainBike,
+  //BMXBike: BMXBike,
+  //RacingBike: RacingBike,
 }
