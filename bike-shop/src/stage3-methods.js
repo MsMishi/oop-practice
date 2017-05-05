@@ -56,6 +56,7 @@ Tire.prototype.repair = function() {
   this._isFlat = false
 }
 
+
 module.exports = {
   Bike: Bike,
   Frame: Frame,
