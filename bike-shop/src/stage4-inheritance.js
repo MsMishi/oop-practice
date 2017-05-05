@@ -33,14 +33,31 @@ class MountainBike extends Bike {
 class BMXBike extends Bike {
   constructor() {
     super();
-    this.
+    this.brakes = {
+      front: false,
+      back: true
+    }
+    this.tires[0].diameter = 20
+    this.tires[1].diameter = 20
   }
+}
 
+class RacingBike extends Bike {
+  constructor() {
+    super();
+    this.frame.style = "racing"
+    this.tires[0].type = "road"
+    this.tires[1].type = "road"
+    this.rings = [3, 10]
+  }
+  gearSpeeds(){
+    return this.rings[0] * this.rings[1]
+  }
 }
 
 module.exports = {
   Bike: Bike,
   MountainBike: MountainBike,
-  //BMXBike: BMXBike,
-  //RacingBike: RacingBike,
+  BMXBike: BMXBike,
+  RacingBike: RacingBike,
 }
